@@ -33,6 +33,9 @@
     /*max širina stranice*/
     --site-max-width:1300px;
 }
+html{
+    scroll-behavior: smooth;
+}
 /*style za cijelu web str*/
 ul{
     list-style: none;
@@ -255,6 +258,7 @@ header .navbar {
 }
 
 .testimonials-section .testimonial {
+    user-select: none;
     display: flex;
     padding: 35px;
     text-align: center;
@@ -366,6 +370,35 @@ header .navbar {
 .contact-section .contact-form .submit-button:hover{
     color:var(--primary-color);
     background: transparent;
+}
+/*FOOTER----------------------------------------------------------------------------------------------*/
+.footer-section{
+    background: var(--dark-color);
+    padding: 20px 0;
+}
+.footer-section .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-section :where(.copyright-text, .social-link, .policy-link){
+    color: var(--white-color);
+    transition: 0.2s ease;
+}
+.footer-section .social-link-list{
+    display: flex;
+    gap: 25px;
+}
+.footer-section .social-link-list .social-link{
+    font-size: var(--font-size-l);
+}
+.footer-section .social-link-list .social-link:hover,
+.footer-section .policy-text .policy-link:hover{
+    color: var(--secondary-color);
+}
+.footer-section .policy-text .separator{
+color: var(--white-color);
+margin: 0 5px;
 }
 
 
@@ -499,6 +532,10 @@ header .navbar {
     }
     .testimonials-section .slider-wrapper{
         margin: 0 0 30px;
+    }
+    .footer-section .section-content{
+        flex-direction: column;
+        gap: 20px;
     }
     
 }
